@@ -75,8 +75,50 @@ class Triangulo extends Figura
         $this->_base = $base;
     }
 
+    /**
+     * toString
+     *
+     * Description
+     *
+     * @return string
+     */
     public function toString() {
-        return 'Triangulo[' . $this->_origen->toString() . ', ' . $this->_base . ', ' . $this->_altura . ']';
+        $origenToString = parent::toString();
+        return 'Triangulo[' . $origenToString . ', ' . $this->_base . ', ' . $this->_altura . ']';
+    }
+
+    /**
+     * area
+     *
+     * Description
+     *
+     * @return mixed
+     */
+    public function area() {
+        return $this->_base * $this->_altura / 2;
+    }
+
+    /**
+     * perimetro
+     *
+     * Description
+     *
+     * @return mixed
+     */
+    public function perimetro() {
+        return sqrt(pow($this->_altura, 2) + pow($this->_base / 2, 2)) * 2 + $this->_base;
+    }
+
+    /**
+     * escalar
+     *
+     * Description
+     *
+     * @param int $dx
+     */
+    public function escalar($dx) {
+        $this->_base    *= $dx / 100;
+        $this->_altura  *= $dx / 100;
     }
 
 }
