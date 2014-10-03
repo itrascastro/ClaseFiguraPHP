@@ -23,9 +23,9 @@ class Index
 {
     public function pruebaPunto() {
         $p = new Punto(3,4);
-        echo $p->toString() . '<br />';
+        echo $p . '<br />';
         $p->desplazar(10,10);
-        echo $p->toString() . '<br />';
+        echo $p . '<br />';
 
         $p1 = new Punto(2,2);
 
@@ -36,11 +36,11 @@ class Index
         $origen = new Punto(0,0);
         $c = new Circulo($origen, 3);
 
-        echo $c->toString();
+        echo $c;
 
         $c->desplazar(10,10);
 
-        echo $c->toString();
+        echo $c;
     }
 }
 

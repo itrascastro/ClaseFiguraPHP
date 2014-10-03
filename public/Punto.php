@@ -57,7 +57,7 @@ class Punto
         $this->_y = $y;
     }
 
-    public function toString() {
+    public function __toString() {
         return 'Punto[' . $this->_x . ', ' . $this->_y . ']';
     }
 

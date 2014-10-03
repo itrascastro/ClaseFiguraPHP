@@ -72,9 +72,9 @@ class Cuadrado extends Figura
         $this->_ancho *= $dx / 100;
     }
 
-    public function toString()
+    public function __toString()
     {
-        $origenToString = parent::toString();
+        $origenToString = parent::__toString();
         return 'Cuadrado[' . $origenToString . ', ' . $this->_ancho . ']';
     }
 }

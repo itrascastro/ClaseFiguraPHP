@@ -82,9 +82,9 @@ class Triangulo extends Figura
      *
      * @return string
      */
-    public function toString()
+    public function __toString()
     {
-        $origenToString = parent::toString();
+        $origenToString = parent::__toString();
         return 'Triangulo[' . $origenToString . ', ' . $this->_base . ', ' . $this->_altura . ']';
     }
 
