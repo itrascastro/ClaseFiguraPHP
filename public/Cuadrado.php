@@ -69,7 +69,7 @@ class Cuadrado extends Figura
      */
     public function escalar($dx)
     {
-        // TODO: Implement escalar() method.
+        $this->_ancho *= $dx / 100;
     }
 
     public function toString()
