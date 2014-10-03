@@ -16,88 +16,65 @@
 
 namespace figura;
 
-require_once 'Punto.php';
 require_once 'Figura.php';
 
-class Circulo extends Figura
+class Cuadrado extends Figura
 {
     /**
      * @var int
      */
-    private $_radio;
+    protected $_ancho;
 
     /**
      * @param Punto $_origen
-     * @param int   $_radio
+     * @param int   $_ancho
      */
-    public function __construct(Punto $_origen, $_radio)
+    function __construct($_origen, $_ancho)
     {
         parent::__construct($_origen);
-        $this->_radio   = $_radio;
+        $this->_ancho = $_ancho;
     }
 
     /**
      * area
      *
-     * Circle area
+     * Description
      *
-     * @return int
+     * @return mixed
      */
     public function area()
     {
-        return M_PI * pow($this->_radio, 2);
+        return pow($this->base, 2);
     }
 
     /**
      * perimetro
      *
-     * Perimetro de un cículo
+     * Description
      *
-     * @return int
+     * @return mixed
      */
     public function perimetro()
     {
-        return 2 * M_PI * $this->_radio;
+        return $this->_ancho * 4;
     }
 
     /**
      * escalar
      *
-     * Scales the circle
+     * Description
      *
      * @param int $dx
+     *
      */
     public function escalar($dx)
     {
-        $this->_radio *= $dx;
+        // TODO: Implement escalar() method.
     }
 
-    /**
-     * toString
-     *
-     * Return a string representing the circle
-     *
-     * @return string
-     */
     public function toString()
     {
         $origenToString = parent::toString();
-        return 'Circulo[' . $origenToString . ', ' . $this->_radio . ']';
-    }
-
-    /**
-     * @return int
-     */
-    public function getRadio()
-    {
-        return $this->_radio;
-    }
-
-    /**
-     * @param int $radio
-     */
-    public function setRadio($radio)
-    {
-        $this->_radio = $radio;
+        return 'Cuadrado[' . $origenToString . ', ' . $this->_ancho . ']';
     }
 }

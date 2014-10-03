@@ -82,7 +82,8 @@ class Triangulo extends Figura
      *
      * @return string
      */
-    public function toString() {
+    public function toString()
+    {
         $origenToString = parent::toString();
         return 'Triangulo[' . $origenToString . ', ' . $this->_base . ', ' . $this->_altura . ']';
     }
@@ -94,7 +95,8 @@ class Triangulo extends Figura
      *
      * @return mixed
      */
-    public function area() {
+    public function area()
+    {
         return $this->_base * $this->_altura / 2;
     }
 
@@ -105,7 +107,8 @@ class Triangulo extends Figura
      *
      * @return mixed
      */
-    public function perimetro() {
+    public function perimetro()
+    {
         return sqrt(pow($this->_altura, 2) + pow($this->_base / 2, 2)) * 2 + $this->_base;
     }
 
@@ -116,7 +119,8 @@ class Triangulo extends Figura
      *
      * @param int $dx
      */
-    public function escalar($dx) {
+    public function escalar($dx)
+    {
         $this->_base    *= $dx / 100;
         $this->_altura  *= $dx / 100;
     }
