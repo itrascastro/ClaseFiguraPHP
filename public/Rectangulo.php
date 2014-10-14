@@ -59,12 +59,26 @@ class Rectangulo extends Cuadrado
         return 2 * $this->_ancho + 2 * $this->_alto;
     }
 
+    /**
+     * escalar
+     *
+     * Description
+     *
+     * @param int $dx
+     */
     public function escalar($dx)
     {
         parent::escalar($dx); //$this->_ancho
         $this->_alto *= $dx / 100;
     }
 
+    /**
+     * __toString
+     *
+     * Description
+     *
+     * @return string
+     */
     public function __toString()
     {
         $cuadradoToString = parent::__toString();
