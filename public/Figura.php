@@ -26,11 +26,22 @@ abstract class Figura
     protected $_origen;
 
     /**
+     * @var int
+     */
+    private static $_numFiguras = 0;
+
+    /**
      * @param Punto $_origen
      */
     function __construct(Punto $_origen)
     {
+        self::$_numFiguras++;
         $this->_origen = $_origen;
+    }
+
+    public static function  getNumFiguras()
+    {
+        return self::$_numFiguras;
     }
 
     /**
@@ -69,7 +80,8 @@ abstract class Figura
      * @param int $dx
      * @param int $dy
      */
-    public function desplazar($dx, $dy) {
+    public function desplazar($dx, $dy)
+    {
         $this->_origen->desplazar($dx, $dy);
     }
 
@@ -96,7 +108,8 @@ abstract class Figura
      *
      * @return string
      */
-    public function __toString() {
-        return $this->_origen->toString();
+    public function __toString()
+    {
+        return $this->_origen->__toString();
     }
 }

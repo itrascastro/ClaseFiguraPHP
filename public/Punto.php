@@ -20,7 +20,8 @@ class Punto
     private $_x;
     private $_y;
 
-    public function __construct($_x, $_y) {
+    public function __construct($_x, $_y)
+    {
         $this->_x = $_x;
         $this->_y = $_y;
     }
@@ -57,16 +58,19 @@ class Punto
         $this->_y = $y;
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         return 'Punto[' . $this->_x . ', ' . $this->_y . ']';
     }
 
-    public function desplazar($dx, $dy) {
+    public function desplazar($dx, $dy)
+    {
         $this->_x += $dx;
         $this->_y += $dy;
     }
 
-    public function distancia(Punto $p) {
+    public function distancia(Punto $p)
+    {
         $dx = $p->getX() - $this->_x;
         $dy = $p->getY() - $this->_y;
         return sqrt(pow($dx, 2) + pow($dy, 2));

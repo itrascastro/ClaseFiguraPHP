@@ -35,5 +35,40 @@ class Rectangulo extends Cuadrado
         $this->_alto = $_alto;
     }
 
-    
+    /**
+     * area
+     *
+     * Description
+     *
+     * @return int
+     */
+    public function area()
+    {
+        return $this->_ancho * $this->_alto;
+    }
+
+    /**
+     * perimetro
+     *
+     * Description
+     *
+     * @return int
+     */
+    public function perimetro()
+    {
+        return 2 * $this->_ancho + 2 * $this->_alto;
+    }
+
+    public function escalar($dx)
+    {
+        parent::escalar($dx); //$this->_ancho
+        $this->_alto *= $dx / 100;
+    }
+
+    public function __toString()
+    {
+        $cuadradoToString = parent::__toString();
+        return 'Rectangulo[' . $cuadradoToString . ', ' . $this->_alto . ']';
+    }
+
 } 
