@@ -15,6 +15,7 @@
  */
 
 namespace figura;
+
 require_once 'Cuadrado.php';
 
 class Rectangulo extends Cuadrado
