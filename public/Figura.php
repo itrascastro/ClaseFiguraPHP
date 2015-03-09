@@ -49,7 +49,7 @@ abstract class Figura
      *
      * Description
      *
-     * @return mixed
+     * @return int
      */
     abstract public function area();
 
@@ -111,5 +111,10 @@ abstract class Figura
     public function __toString()
     {
         return $this->_origen->__toString();
+    }
+
+    public function distancia(Figura $f)
+    {
+        return $this->_origen->distancia($f->getOrigen());
     }
 }

@@ -17,6 +17,7 @@
 namespace figura;
 
 require_once 'Figura.php';
+require_once 'Punto.php';
 
 class Cuadrado extends Figura
 {
@@ -29,7 +30,7 @@ class Cuadrado extends Figura
      * @param Punto $_origen
      * @param int   $_ancho
      */
-    function __construct($_origen, $_ancho)
+    function __construct(Punto $_origen, $_ancho)
     {
         parent::__construct($_origen);
         $this->_ancho = $_ancho;
@@ -44,7 +45,7 @@ class Cuadrado extends Figura
      */
     public function area()
     {
-        return pow($this->base, 2);
+        return pow($this->_ancho, 2);
     }
 
     /**

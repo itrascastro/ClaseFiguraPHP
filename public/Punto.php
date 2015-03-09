@@ -75,4 +75,11 @@ class Punto
         $dy = $p->getY() - $this->_y;
         return sqrt(pow($dx, 2) + pow($dy, 2));
     }
+
+    public static function distancia2(Punto $p, Punto $p1)
+    {
+        $dx = $p->getX() - $p1->getX();
+        $dy = $p->getY() - $p1->getY();
+        return sqrt(pow($dx, 2) + pow($dy, 2));
+    }
 } 
