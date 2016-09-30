@@ -70,5 +70,19 @@ class Circulo
         return 'Circulo{' . $this->getOrigen() . ', ' . $this->getRadio() . '}';
     }
 
+    public function desplazar($destino)
+    {
+        $this->getOrigen()->desplazar($destino);
+    }
 
+    public function esIgual(Circulo $circulo)
+    {
+        return $this->getOrigen()->esIgual($circulo->getOrigen()) &&
+            $this->getRadio() == $circulo->getRadio();
+    }
+
+    public function area()
+    {
+        return M_PI * pow($this->getRadio(), 2);
+    }
 }
