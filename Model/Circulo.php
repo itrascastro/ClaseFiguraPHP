@@ -85,4 +85,14 @@ class Circulo
     {
         return M_PI * pow($this->getRadio(), 2);
     }
+
+    public function perimetro()
+    {
+        return 2 * M_PI * $this->getRadio();
+    }
+
+    public function escalar($escala)
+    {
+        $this->setRadio($this->getRadio() * $escala);
+    }
 }
