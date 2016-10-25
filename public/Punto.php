@@ -82,4 +82,14 @@ class Punto
         $dy = $p->getY() - $p1->getY();
         return sqrt(pow($dx, 2) + pow($dy, 2));
     }
+
+    public function esIgual(Punto $p)
+    {
+        if ($this->getX() == $p->getX() &&
+            $this->getY() == $p->getY()) {
+            return true;
+        }
+
+        return false;
+    }
 } 

@@ -117,4 +117,10 @@ abstract class Figura
     {
         return $this->_origen->distancia($f->getOrigen());
     }
+
+    public function esIgual(Figura $f)
+    {
+        return $this->getOrigen()->esIgual($f->getOrigen());
+    }
 }
+

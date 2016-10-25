@@ -100,4 +100,13 @@ class Circulo extends Figura
     {
         $this->_radio = $radio;
     }
+
+    public function esIgual(Figura $f)
+    {
+        if ($f instanceof Circulo) {
+            return parent::esIgual($f) && $this->getRadio() == $f->getRadio();
+        }
+
+        return false;
+    }
 }
